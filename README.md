@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=2" alt="Tanishq Narula — software developer building AI and full-stack products" width="100%">
+  <img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=3" alt="Tanishq Narula — software developer building AI and full-stack products" width="100%">
 </p>
 
 <p align="center">
