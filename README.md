@@ -24,7 +24,7 @@ I’m a software developer who enjoys turning ambitious ideas into useful, polis
 |---|---|
 | [**XENIO**](https://github.com/tanishqnarula12/Xenio) | Voice-first personal AI, desktop controls, and approval-based tool safety. |
 | [**AscendAI**](https://github.com/tanishqnarula12/ascend-ai) | A progress tracker for goals, tasks, dashboards, and personal growth. |
-| [**SIH95**](https://github.com/tanishqnarula12/SIH95) | A real-time monitoring and inspection platform concept for accountable oversight. |
+| [**Smart Edu**](https://github.com/tanishqnarula12/smart-edu) | An AI-powered academic platform with role-specific assistants, live analytics, and student-controlled privacy. |
 | [**Lumina Health AI**](https://github.com/tanishqnarula12/health-care-ai) | An AI healthcare assistant project exploring symptom guidance and accessible health experiences. |
 
 ### Tools I enjoy
