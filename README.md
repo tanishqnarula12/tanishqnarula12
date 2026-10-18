@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://tanishqnarula12.netlify.app"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Visit%20my%20site-8B9CFF?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://tanishqnarula12.netlify.app"><img alt="Portfolio website" src="https://img.shields.io/badge/Portfolio-My%20website-8B9CFF?style=for-the-badge&logo=vercel&logoColor=white"></a>
   <a href="https://github.com/tanishqnarula12?tab=repositories"><img alt="Repositories" src="https://img.shields.io/badge/GitHub-My%20projects-64E4CC?style=for-the-badge&logo=github&logoColor=101828"></a>
   <a href="mailto:tanishqnarula60@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-Say%20hello-E0A4FF?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </p>
@@ -32,6 +32,9 @@ I’m a software developer who enjoys turning ambitious ideas into useful, polis
 <p>
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111111">
+  <img alt="Express" src="https://img.shields.io/badge/Express-222222?style=flat-square&logo=express&logoColor=white">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white">
   <img alt="React" src="https://img.shields.io/badge/React-149ECA?style=flat-square&logo=react&logoColor=white">
   <img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=nodedotjs&logoColor=white">
   <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
