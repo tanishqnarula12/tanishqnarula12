@@ -1,24 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
 <title id="title">Tanishq Narula — AI and full-stack developer</title>
-<desc id="desc">A dark navy and cyan banner with a glowing abstract city grid, introducing Tanishq Narula and his work building AI and full-stack products.</desc>
+<desc id="desc">A dark neon profile banner with a gently breathing TN monogram avatar and cyan-green orbital rings.</desc>
 <defs>
  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="300" gradientUnits="userSpaceOnUse"><stop stop-color="#07111B"/><stop offset=".58" stop-color="#0B1C27"/><stop offset="1" stop-color="#10251F"/></linearGradient>
- <linearGradient id="accent" x1="65" y1="90" x2="1100" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#4DE7F2"/><stop offset="1" stop-color="#70F0B0"/></linearGradient>
- <radialGradient id="halo"><stop stop-color="#20CED3" stop-opacity=".24"/><stop offset="1" stop-color="#20CED3" stop-opacity="0"/></radialGradient>
- <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0v36" fill="none" stroke="#71DBE2" stroke-opacity=".09"/></pattern>
+ <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4DE7F2"/><stop offset="1" stop-color="#70F0B0"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#20CED3" stop-opacity=".30"/><stop offset="1" stop-color="#20CED3" stop-opacity="0"/></radialGradient>
+ <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10"/></filter>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0v36" fill="none" stroke="#71DBE2" stroke-opacity=".08"/></pattern>
 </defs>
 <rect width="1200" height="300" rx="26" fill="url(#bg)"/>
 <rect width="1200" height="300" rx="26" fill="url(#grid)"/>
-<circle cx="925" cy="150" r="260" fill="url(#halo)"/>
-<g opacity=".72" stroke="url(#accent)" stroke-width="1">
- <path d="M700 300V170h35v130M745 300V125h48v175M805 300V191h29v109M850 300V90h61v210M927 300V153h37v147M980 300V116h48v184M1040 300V183h33v117M1085 300V144h54v156"/>
- <path d="M712 194h10m39-42h18m-18 23h18m67-60h24m-24 22h24m-24 22h24m68 9h14m-14 20h14m40-66h19m-19 21h19m-19 21h19m58 13h13m-13 20h13"/>
-</g>
-<path d="M670 265h470" stroke="#4DE7F2" stroke-opacity=".3"/>
+<circle cx="968" cy="150" r="175" fill="url(#halo)"/>
 <text x="76" y="76" fill="#70F0B0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="3.4">SOFTWARE DEVELOPER  /  AI + FULL STACK</text>
 <text x="72" y="151" fill="#F3FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="56" font-weight="720" letter-spacing="-2">Tanishq Narula</text>
 <text x="78" y="192" fill="#B5C8CF" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="19">Building useful AI and full-stack products.</text>
-<path d="M78 229h430" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
-<circle cx="508" cy="229" r="4" fill="#70F0B0"/>
+<path d="M78 229h470" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
 <text x="78" y="260" fill="#86A4AE" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="2">IDEATE  /  BUILD  /  ITERATE</text>
+<!-- Breathing monogram avatar -->
+<circle cx="972" cy="150" r="92" fill="#39E1D6" opacity=".13" filter="url(#softGlow)">
+  <animate attributeName="opacity" values=".09;.2;.09" dur="4s" repeatCount="indefinite"/>
+</circle>
+<circle cx="972" cy="150" r="82" stroke="#4DE7F2" stroke-opacity=".24" stroke-width="1"/>
+<ellipse cx="972" cy="150" rx="111" ry="42" transform="rotate(-28 972 150)" fill="none" stroke="url(#accent)" stroke-opacity=".7" stroke-width="1.5"/>
+<ellipse cx="972" cy="150" rx="111" ry="42" transform="rotate(-28 972 150)" fill="none" stroke="#D6FFF7" stroke-width="2" stroke-dasharray="34 680">
+  <animate attributeName="stroke-dashoffset" from="714" to="0" dur="9s" repeatCount="indefinite"/>
+</ellipse>
+<g transform="translate(972 150)">
+  <g>
+    <circle r="57" fill="#0B2530" stroke="url(#accent)" stroke-width="2"/>
+    <circle r="48" fill="#0D202A" stroke="#7AFFF0" stroke-opacity=".2"/>
+    <text x="0" y="13" text-anchor="middle" fill="#F2FFFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="33" font-weight="750" letter-spacing="-2">TN</text>
+    <circle cx="40" cy="-39" r="5" fill="#70F0B0">
+      <animate attributeName="opacity" values=".35;1;.35" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <animateTransform attributeName="transform" type="scale" values=".95;1.045;.95" dur="4s" keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" calcMode="spline" repeatCount="indefinite"/>
+  </g>
+</g>
+<circle r="4" fill="#70F0B0"><animateMotion dur="9s" repeatCount="indefinite" path="M1070 94 A111 42 -28 1 1 874 206 A111 42 -28 1 1 1070 94"/></circle>
 </svg>
