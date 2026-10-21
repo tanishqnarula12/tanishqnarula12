@@ -1,0 +1,29 @@
+name: Refresh contribution city
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+      - name: Generate city from public contribution calendar
+        run: python3 scripts/update_contribution_city.py
+      - name: Commit refreshed city
+        run: |
+          git add assets/contribution-city.svg
+          if git diff --cached --quiet; then
+            echo "Contribution city is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh live contribution city"
+          git push
