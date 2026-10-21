@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://tanishqnarula12.netlify.app"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=7" alt="Tanishq Narula with a breathing neon TN logo avatar; click to open his portfolio" width="100%"></a>
+  <a href="https://tanishqnarula12.netlify.app"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=7" alt="Tanishq Narula's illustrated portfolio avatar breathing in a neon halo; click to open his portfolio" width="100%"></a>
 </p>
 
 <p align="center">
