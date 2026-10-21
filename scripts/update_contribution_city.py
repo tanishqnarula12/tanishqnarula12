@@ -74,30 +74,35 @@ def render(days: list[tuple[date, int, int]]) -> str:
     start = min(day for day, _, _ in days)
     levels = ["#10271D", "#168447", "#25B65D", "#45DB78", "#9AF2A8"]
     max_count = max((count for _, _, count in days), default=1)
-    bars: list[str] = []
+    floors: list[str] = []
+    towers: list[tuple[float, str]] = []
 
     for day, level, count in days:
         offset = (day - start).days
         week, weekday = divmod(offset, 7)
-        x = 55 + week * 20 + weekday * 12
-        y = 245 + week * 3.1 - weekday * 8
+        x = 65 + week * 18 + weekday * 10
+        y = 310 + week * 3 - weekday * 7
         a = (x, y)
-        b = (x + 20, y + 8)
-        c = (x + 32, y)
-        d = (x + 12, y - 8)
+        b = (x + 18, y + 7)
+        c = (x + 28, y)
+        d = (x + 10, y - 7)
         tint = levels[min(max(level, 0), 4)]
         if count == 0:
-            bars.append(polygon([a, b, c, d], "#0D2118", "#274532", .9))
+            floors.append(polygon([a, b, c, d], "#0D2118", "#274532", .95))
             continue
         height = min(108.0, 14.0 + 94.0 * (count / max_count) ** 0.55)
         at, bt, ct, dt = ((px, py - height) for px, py in (a, b, c, d))
-        glow = f'<ellipse cx="{x + 16}" cy="{y - height / 2:.1f}" rx="15" ry="{height / 1.5:.1f}" fill="{tint}" opacity=".19" filter="url(#glow)"/>'
-        bars.append(glow)
-        bars.append(polygon([a, b, bt, at], "#126539", tint, .96))
-        bars.append(polygon([b, c, ct, bt], "#0A4B2A", tint, .98))
-        bars.append(polygon([at, bt, ct, dt], tint, "#B8FFC4", 1))
+        floors.append(polygon([a, b, c, d], "#163821", "#3A7046", .98))
+        block = [
+            f'<ellipse cx="{x + 14}" cy="{y - height / 2:.1f}" rx="14" ry="{height / 1.5:.1f}" fill="{tint}" opacity=".18" filter="url(#glow)"/>',
+            polygon([a, b, bt, at], "#126539", tint, .98),
+            polygon([b, c, ct, bt], "#0A4B2A", tint, 1),
+            polygon([at, bt, ct, dt], tint, "#B8FFC4", 1),
+        ]
         if count >= max(8, max_count * .55):
-            bars.append(f'<path d="M{x + 12:.1f} {y - height + 3:.1f}h10" stroke="#D9FFE0" stroke-width="1.5" opacity=".9"/>')
+            block.append(f'<path d="M{x + 10:.1f} {y - height + 3:.1f}h9" stroke="#D9FFE0" stroke-width="1.5" opacity=".9"/>')
+        towers.append((y, "".join(block)))
+    bars = floors + [markup for _, markup in sorted(towers, key=lambda item: item[0])]
 
     updated = datetime.now(timezone.utc).strftime("%d %b %Y · %H:%M UTC")
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
@@ -114,17 +119,14 @@ def render(days: list[tuple[date, int, int]]) -> str:
 <rect width="1200" height="590" rx="26" fill="url(#stars)"/>
 <circle cx="775" cy="340" r="430" fill="url(#aura)"/>
 <text x="58" y="58" fill="#80F39A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="3.1">LIVE CONTRIBUTION CITY  /  BUILDER MODE</text>
-<text x="55" y="108" fill="#F2FFF4" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="720">I build useful things from bold ideas.</text>
-<g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
- <rect x="790" y="28" width="365" height="112" rx="15" fill="#0D2118" stroke="#315A3B" stroke-width="1.2"/>
- <path d="M972 45v78" stroke="#315A3B"/>
- <text x="816" y="58" fill="#86A994" font-size="10" letter-spacing="1.8">CONTRIBUTIONS</text>
- <text x="814" y="102" fill="#9AF2A8" font-size="34" font-weight="700">{total:,}</text>
- <text x="997" y="58" fill="#86A994" font-size="10" letter-spacing="1.8">ACTIVE DAYS</text>
- <text x="995" y="102" fill="#F2FFF4" font-size="34" font-weight="700">{active}</text>
-</g>
-<path d="M55 462 1090 462" stroke="#69E78C" stroke-opacity=".14"/>
+<text x="55" y="108" fill="#F2FFF4" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="32" font-weight="720">Building ideas into real products.</text>
 <g>{''.join(bars)}</g>
+<rect x="790" y="28" width="365" height="112" rx="15" fill="#0D2118" stroke="#315A3B" stroke-width="1.2"/>
+<path d="M972 45v78" stroke="#315A3B"/>
+<text x="816" y="58" fill="#86A994" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10" letter-spacing="1.8">CONTRIBUTIONS</text>
+<text x="814" y="102" fill="#9AF2A8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="700">{total:,}</text>
+<text x="997" y="58" fill="#86A994" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10" letter-spacing="1.8">ACTIVE DAYS</text>
+<text x="995" y="102" fill="#F2FFF4" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="700">{active}</text>
 <path d="M55 488 1100 488" stroke="url(#beam)" stroke-opacity=".25"/>
 <text x="58" y="532" fill="#91B39A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" letter-spacing="1.2">DAILY CONTRIBUTIONS  ·  TALLER BLOCKS = MORE ACTIVITY</text>
 <g transform="translate(927 526)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" fill="#91B39A">
