@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
 
 jobs:
@@ -17,14 +18,22 @@ jobs:
       - name: Generate city from public contribution calendar
         run: python3 scripts/update_contribution_city.py
       - name: Commit refreshed city
+        id: commit
         run: |
           git add assets/contribution-city.svg
           git add assets/contribution-city-data.json
           if git diff --cached --quiet; then
             echo "Contribution city is already current."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Refresh live contribution city"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Deploy the refreshed city to GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-contribution-city.yml --ref main
