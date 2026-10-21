@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://tanishqnarula12.netlify.app"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=7" alt="Tanishq Narula's illustrated portfolio avatar breathing in a neon halo; click to open his portfolio" width="100%"></a>
+  <a href="https://tanishqnarula12.netlify.app"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=8" alt="Tanishq Narula's illustrated portfolio avatar breathing in a neon halo; click to open his portfolio" width="100%"></a>
 </p>
 
 <p align="center">
@@ -61,7 +61,7 @@ I build polished software that connects **AI, voice interfaces, and full-stack p
 ## Contribution City · Live Activity
 
 <p align="center">
-  <a href="https://github.com/tanishqnarula12?tab=overview#contribution-activity"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/contribution-city.svg" alt="Live neon 3D contribution city generated from Tanishq's GitHub activity; click to open the native contribution graph" width="100%"></a>
+  <a href="https://github.com/tanishqnarula12?tab=overview#contribution-activity"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/contribution-city.svg?v=2" alt="Live neon 3D contribution city generated from Tanishq's GitHub activity; click to open the native contribution graph" width="100%"></a>
 </p>
 
 <p align="center"><sub>Each building reflects daily contribution data from GitHub’s public calendar. The city refreshes automatically every six hours; click it to open the native contribution graph.</sub></p>
