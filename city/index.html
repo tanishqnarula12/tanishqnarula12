@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07120d">
+  <meta name="description" content="Explore Tanishq Narula's public GitHub contribution city by date.">
+  <title>Contribution City · Tanishq Narula</title>
+  <link rel="stylesheet" href="./city.css">
+  <script src="./city.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <a class="back-link" href="https://github.com/tanishqnarula12">← GitHub profile</a>
+      <p class="eyebrow">PUBLIC ACTIVITY / BUILDER MODE</p>
+      <h1>Contribution City</h1>
+      <p class="lead">A year of small steps, shaped into one living skyline.</p>
+    </header>
+
+    <section class="city-explorer" data-contribution-city
+      data-source-url="../assets/contribution-city-data.json" aria-label="Interactive contribution city">
+      <div class="city-intro">
+        <p>Choose a date, inspect its building, or play through the year.</p>
+        <a href="https://github.com/tanishqnarula12?tab=overview#contribution-activity" target="_blank" rel="noreferrer">Open GitHub activity ↗</a>
+      </div>
+
+      <div class="city-metrics" aria-label="Contribution statistics">
+        <div class="city-metric"><span>Contributions</span><strong data-city-total>—</strong></div>
+        <div class="city-metric"><span>Active days</span><strong data-city-active>—</strong></div>
+        <div class="city-metric"><span>Streak at date</span><strong data-city-current-streak>—</strong></div>
+        <div class="city-metric"><span>Longest streak</span><strong data-city-longest-streak>—</strong></div>
+      </div>
+
+      <div class="city-controls">
+        <p class="city-status" data-city-status role="status">Loading public contribution data…</p>
+        <div class="city-control-buttons" aria-label="City playback controls">
+          <button type="button" data-city-play disabled>Play</button>
+          <button type="button" data-city-pause disabled>Pause</button>
+          <button type="button" data-city-restart disabled>Restart</button>
+          <button type="button" class="city-expand-button" data-city-expand disabled aria-label="Expand contribution city">Expand</button>
+          <button type="button" class="city-close-button" data-city-close aria-label="Close expanded contribution city" hidden>Close</button>
+        </div>
+      </div>
+
+      <div class="city-stage">
+        <svg class="city-scene" data-city-scene viewBox="0 0 1200 640" role="group" aria-label="Interactive isometric map of daily GitHub contributions">
+          <defs>
+            <linearGradient id="city-background" x1="0" y1="0" x2="1200" y2="640" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#07120D"/><stop offset=".58" stop-color="#0A1D12"/><stop offset="1" stop-color="#102018"/>
+            </linearGradient>
+            <radialGradient id="city-aura">
+              <stop stop-color="#31E970" stop-opacity=".2"/><stop offset="1" stop-color="#31E970" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="city-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+          </defs>
+          <rect class="city-background" width="1200" height="640" rx="26" fill="url(#city-background)"/>
+          <circle cx="775" cy="340" r="430" fill="url(#city-aura)"/>
+          <g data-city-grid aria-hidden="true"></g>
+          <g data-city-buildings aria-label="Contribution buildings"></g>
+          <text x="58" y="58" fill="#80F39A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="3.1">LIVE CONTRIBUTION CITY / BUILDER MODE</text>
+          <text x="55" y="108" fill="#F2FFF4" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="32" font-weight="700">Building ideas into real products.</text>
+          <text x="58" y="612" fill="#91B39A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" letter-spacing="1.2">DAILY PUBLIC CONTRIBUTIONS · TALLER BLOCKS = MORE ACTIVITY</text>
+        </svg>
+      </div>
+
+      <div class="city-timeline">
+        <div class="city-timeline-heading">
+          <label for="city-timeline-range">Timeline</label>
+          <output data-city-date for="city-timeline-range">Waiting for data…</output>
+        </div>
+        <input id="city-timeline-range" data-city-range type="range" min="0" max="0" value="0" step="1" disabled aria-label="Choose a date in the contribution timeline">
+        <div class="city-timeline-range-labels"><span data-city-start>—</span><span data-city-end>—</span></div>
+      </div>
+
+      <div class="city-inspector" data-city-inspector role="status" aria-live="polite" aria-atomic="true">
+        <p data-city-selection>Select a building to inspect its date and contribution count.</p>
+        <a href="https://github.com/tanishqnarula12?tab=overview#contribution-activity" target="_blank" rel="noreferrer">View GitHub contribution calendar ↗</a>
+      </div>
+
+      <p class="city-data-note">Each building represents one date from GitHub’s public contribution calendar. Counts may exclude private activity. Streaks count consecutive calendar dates with at least one contribution, using GitHub’s displayed date labels.</p>
+
+      <div class="city-fallback" data-city-fallback hidden>
+        <p data-city-error>Interactive data is unavailable right now. Here’s the latest static city.</p>
+        <img src="../assets/contribution-city.svg" alt="Static isometric GitHub contribution city">
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <a href="https://www.linkedin.com/in/tanishq-narula-0295a7328/?isSelfProfile=true">LinkedIn ↗</a>
+      <span>Public GitHub data · no private activity or tokens</span>
+    </footer>
+  </main>
+</body>
+</html>

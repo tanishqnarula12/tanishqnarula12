@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://tanishqnarula12.netlify.app"><img alt="Portfolio" src="https://img.shields.io/badge/PORTFOLIO-Explore%20my%20work-0B1B25?style=for-the-badge&logo=vercel&logoColor=70F0B0"></a>
   <a href="https://github.com/tanishqnarula12?tab=repositories"><img alt="Projects" src="https://img.shields.io/badge/PROJECTS-Built%20on%20GitHub-0B1B25?style=for-the-badge&logo=github&logoColor=4DE7F2"></a>
+  <a href="https://www.linkedin.com/in/tanishq-narula-0295a7328/?isSelfProfile=true"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-Connect-0B1B25?style=for-the-badge&logo=linkedin&logoColor=0A66C2"></a>
   <a href="mailto:tanishqnarula60@gmail.com"><img alt="Email" src="https://img.shields.io/badge/CONTACT-Say%20hello-0B1B25?style=for-the-badge&logo=gmail&logoColor=70F0B0"></a>
 </p>
 
@@ -65,6 +66,8 @@ I build polished software that connects **AI, voice interfaces, and full-stack p
 </p>
 
 <p align="center"><sub>Each building reflects daily contribution data from GitHub’s public calendar. The city refreshes automatically every six hours; click it to open the native contribution graph.</sub></p>
+
+<p align="center"><a href="https://tanishqnarula12.github.io/tanishqnarula12/city/"><strong>Explore the interactive Contribution City ↗</strong></a></p>
 
 ---
 
