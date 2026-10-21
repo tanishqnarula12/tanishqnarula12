@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import html
+import json
 import re
 import sys
 import urllib.request
@@ -13,6 +14,7 @@ from pathlib import Path
 
 USERNAME = "tanishqnarula12"
 OUTPUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("assets/contribution-city.svg")
+DATA_OUTPUT = OUTPUT.with_name("contribution-city-data.json")
 
 
 class CalendarParser(HTMLParser):
@@ -139,11 +141,28 @@ def render(days: list[tuple[date, int, int]]) -> str:
 '''
 
 
+def render_data(days: list[tuple[date, int, int]]) -> str:
+    """Serialize the same public calendar used by the static SVG for the hosted explorer."""
+    payload = {
+        "schema_version": 1,
+        "username": USERNAME,
+        "source": "GitHub public contribution calendar",
+        "day_semantics": "GitHub calendar date labels; counts may exclude private activity",
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "days": [
+            {"date": day.isoformat(), "level": level, "count": count}
+            for day, level, count in sorted(days, key=lambda item: item[0])
+        ],
+    }
+    return json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+
+
 def main() -> None:
     days = fetch_days()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(render(days), encoding="utf-8")
-    print(f"Wrote {OUTPUT}: {sum(x[2] for x in days):,} contributions / {len(days)} days")
+    DATA_OUTPUT.write_text(render_data(days), encoding="utf-8")
+    print(f"Wrote {OUTPUT} and {DATA_OUTPUT}: {sum(x[2] for x in days):,} public contributions / {len(days)} days")
 
 
 if __name__ == "__main__":
