@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://tanishqnarula12.netlify.app"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=12" alt="Tanishq Narula's illustrated portfolio avatar breathing in a neon halo; click to open his portfolio" width="100%"></a>
+  <a href="https://tanishqnarula.dev"><img src="https://raw.githubusercontent.com/tanishqnarula12/tanishqnarula12/main/assets/profile-banner.svg?v=12" alt="Tanishq Narula's illustrated portfolio avatar breathing in a neon halo; click to open his portfolio" width="100%"></a>
 </p>
 
 <table align="center">
   <tr>
-    <td><a href="https://tanishqnarula12.netlify.app"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-0B1B25?style=for-the-badge&logo=vercel&logoColor=70F0B0"></a></td>
+    <td><a href="https://tanishqnarula.dev"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-0B1B25?style=for-the-badge&logo=vercel&logoColor=70F0B0"></a></td>
     <td><a href="https://github.com/tanishqnarula12?tab=repositories"><img alt="GitHub projects" src="https://img.shields.io/badge/Projects-0B1B25?style=for-the-badge&logo=github&logoColor=4DE7F2"></a></td>
     <td><a href="https://www.linkedin.com/in/tanishq-narula-0295a7328/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a></td>
     <td><a href="mailto:tanishqnarula60@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-0B1B25?style=for-the-badge&logo=gmail&logoColor=70F0B0"></a></td>
@@ -76,6 +76,6 @@ I build polished software that connects **AI, voice interfaces, and full-stack p
 <p align="center">
   <strong>Curious about what I’m building?</strong><br>
   <a href="https://github.com/tanishqnarula12?tab=repositories">Explore my repositories</a> ·
-  <a href="https://tanishqnarula12.netlify.app">Visit my portfolio</a> ·
+  <a href="https://tanishqnarula.dev">Visit my portfolio</a> ·
   <a href="mailto:tanishqnarula60@gmail.com">Get in touch</a>
 </p>
